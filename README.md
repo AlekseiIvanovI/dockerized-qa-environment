@@ -7,7 +7,7 @@
 
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)](https://www.docker.com/)
 [![Selenium Grid](https://img.shields.io/badge/Selenium-Grid-green)](https://www.selenium.dev/documentation/grid/)
-[![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.14-blue)](https://www.python.org/)
 
 ## Overview
 
