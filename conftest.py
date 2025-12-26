@@ -28,7 +28,6 @@ def driver():
     }
     options.add_experimental_option("prefs", prefs)
 
-    # Hardcode for Docker Compose — this is the reliable way
     command_executor = "http://selenium:4444/wd/hub"
 
     driver = webdriver.Remote(
