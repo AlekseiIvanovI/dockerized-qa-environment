@@ -1,0 +1,21 @@
+services:
+  selenium:
+    image: selenium/standalone-chrome:latest
+    shm_size: 2gb
+    ports:
+      - "4444:4444"   # optional for local access
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444/status"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 15s
+
+  tests:
+    build: .
+    depends_on:
+      selenium:
+        condition: service_healthy   # Critical — waits for Selenium to be fully ready
+    volumes:
+      - ./screenshoots:/app/screenshoots
+      - ./my_allure:/app/my_allure
